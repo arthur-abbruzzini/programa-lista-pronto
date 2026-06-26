@@ -1,0 +1,12 @@
+{
+  "name": "programa-lista-pronto",
+  "version": "1.0.0",
+  "description": "Lista de tarefas integrada com Node e Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
