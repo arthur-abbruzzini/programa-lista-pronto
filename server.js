@@ -1,9 +1,10 @@
 const express = require("express");
+const path = require("path");
 const app = express();
 const porta = 3000;
 
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Array de tarefas para suportar ID e status de conclusão
 let tarefas = [];
