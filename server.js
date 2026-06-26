@@ -55,6 +55,12 @@ app.delete("/tarefas/:id", function(req, res) {
     res.json({ mensagem: "Tarefa removida!" });
 });
 
-app.listen(porta, function() {
-    console.log(`Servidor rodando em http://localhost:${porta}`);
-});
+// configuração para o vercel e node local
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(porta, function() {
+        console.log(`Servidor rodando localmente em http://localhost:${porta}`);
+    });
+}
+
+// Linha CRUCIAL para a Vercel funcionar:
+module.exports = app;
